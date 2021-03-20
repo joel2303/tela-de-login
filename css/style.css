@@ -20,7 +20,7 @@ body {
     border-radius: 15px;
     background-color: rgb(255, 255, 255);
     width: 960px;
-    height: 60%;
+    height: 63%;
     justify-content: space-between; /*Usada para dar um espaço entre os conteudos dentro da div*/
     align-items: center;
     position: relative;
@@ -29,14 +29,14 @@ body {
     content: "";
     position: absolute;
     background-color: rgba(80, 20, 220, 0.719);
-    width: 40%;
+    width: 37%;
     height: 100%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 
 
 
-    left: 60%;
+    left: 63%;
 }
 .primeiro-conteudo {
     display: flex;
@@ -141,7 +141,7 @@ body {
     display: flex; /* Usado para deixar os inputs flex */
     flex-direction: column; /* Usada para alinhar os inputs em forma de coluna */
     width: 55%;
-    text-align: center;
+    
 }
 .form input {
     height: 45px; 
@@ -176,4 +176,10 @@ body {
 }
 .password {
     color: #34495e;
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: center;
+}
+.password::first-letter { /*PSEUDO CLASS só para a primeira letra maiuscula especificamente*/
+    text-transform: capitalize;
 }
