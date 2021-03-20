@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+.container {
+    display: flex; /* Usado para colocar o conteudo da div pai alinhadas ao lado*/
+    justify-content: center; /* Centralizar esse conteudo alinhado, mas em baixo */
+    align-items: center; /* Centralizer totalmente*/
+    height: 100vh; /*Responsavel por dar uma altura 100%, fazendo com que o conteudo fique alinhado corretamente*/
+    background-color: rgba(190, 188, 184, 0.527);
+}
+.conteudo {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between; /*Usada para dar um espaço entre os conteudos dentro da div*/
+    align-items: center;
+    position: relative;
+}
+.conteudo::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(80, 20, 220, 0.719);
+    width: 40%;
+    height: 100%;
+}
+.primeiro-conteudo {
+    display: flex;
+}
+.titulo {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize; /*Usado para deixar as primeiras letras da palavras em maiusculas*/
+
+}
+.titulo-primario {
+    color: #fff;
+}
+.titulo-segundo {
+    color:rgb(57, 20, 220);
+}
+.description {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 50px;
+}
+.primary-description {
+    color: #fff;
+
+}
+.segundo-description {
+    color: #7f8c8d;
+}
+.btn {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bolder;
+    
+}
+.btn-primary {
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+.btn-primary:hover {  /* USADO PARA TRANSFORMAR O BOTÃO QUANDO PASSAR O MOUSE EM CIMA*/
+    background-color: #fff;
+    color: rgb(57, 20, 220);
+
+}
+.primeira-coluna {
+    text-align: center;
+    flex: 1 0 auto; /* Flex é usado para dividir o espaço na div*/
+    z-index: 10;
+}
+.segunda-coluna {
+    flex: 2 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.list-social-media {
+    display: flex;
+    list-style-type: none;
+}
+.item-social-media {
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px; /* Centralizar o icone dentro da borda redonda */
+    text-align: center;
+}
+.item-social-media a { /* Mudando a cor dos icones, os icones são considerados textos */
+    color: #95a5a6;
+}
+.form {
+    display: flex; /* Usado para deixar os inputs flex */
+    flex-direction: column; /* Usada para alinhar os inputs em forma de coluna */
+}
+.form input {
+    height: 45px;
+    border: none;
+    background-color: #ecf0f1;
+}
+
+/* CONTEUDO SEGUNDA PARTE */
+
+.segundo-conteudo {
+    position: absolute;
+    display: none;
+
+}
