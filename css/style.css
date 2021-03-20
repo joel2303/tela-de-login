@@ -17,11 +17,10 @@ body {
     background-color: rgba(190, 188, 184, 0.527);
 }
 .conteudo {
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: rgb(255, 255, 255);
-    width: 80%;
-    height: 50%;
-    display: flex;
+    width: 960px;
+    height: 60%;
     justify-content: space-between; /*Usada para dar um espaço entre os conteudos dentro da div*/
     align-items: center;
     position: relative;
@@ -32,9 +31,16 @@ body {
     background-color: rgba(80, 20, 220, 0.719);
     width: 40%;
     height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+
+
+    left: 60%;
 }
 .primeiro-conteudo {
     display: flex;
+    display: none;
 }
 .titulo {
     font-size: 28px;
@@ -46,15 +52,16 @@ body {
     color: #fff;
 }
 .titulo-segundo {
-    color:rgb(57, 20, 220);
+    color:rgba(80, 20, 220, 0.719);
 }
 .description {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 40px;
 }
 .primary-description {
     color: #fff;
+    font-weight: 500;
 
 }
 .segundo-description {
@@ -62,22 +69,37 @@ body {
 }
 .btn {
     border-radius: 15px;
-    text-transform: uppercase;
     color: #fff;
-    font-size: 10px;
-    padding: 10px 50px;
+    font-size: 13px;
+    padding: 2px 50px;
     cursor: pointer;
     font-weight: bolder;
+    width: 150px;
+    height: 35px;
+    align-self: center;
+    border: none;
+    margin-top: 1rem 0;
     
 }
-.btn-primary {
+.btn-primario {
     background-color: transparent;
     border: 1px solid #fff;
 }
-.btn-primary:hover {  /* USADO PARA TRANSFORMAR O BOTÃO QUANDO PASSAR O MOUSE EM CIMA*/
+.btn-primario:hover {  /* USADO PARA TRANSFORMAR O BOTÃO QUANDO PASSAR O MOUSE EM CIMA*/
     background-color: #fff;
-    color: rgb(57, 20, 220);
-
+    color: rgba(80, 20, 220, 0.719);
+}
+.btn-segundo {
+    color:rgb(255, 255, 255); 
+    background-color: rgba(80, 20, 220, 0.719);
+    margin-top: 15px;
+    font-size: 12px;
+    height: 30px;
+}
+.btn-segundo:hover {
+    background-color: #fff;
+    color: rgba(80, 20, 220, 0.719);
+    border: 1px solid rgba(80, 20, 220, 0.719);
 }
 .primeira-coluna {
     text-align: center;
@@ -91,35 +113,67 @@ body {
     align-items: center;
 
 }
+.social-media {
+    margin: 0.5rem 0;
+}
+.link-social-media:not(:first-child) { /*Atribuir margin aos icones, mas negando a margin no primeiro icone para não desalinhar todos*/
+    margin-left: 10px;
+}
+.link-social-media:hover {
+    background-color: rgba(80, 20, 220, 0.719);
+    color: white;
+}
+
 .list-social-media {
     display: flex;
     list-style-type: none;
 }
-.item-social-media {
+.link-social-media {
     border: 1px solid #bdc3c7;
     border-radius: 50%;
     width: 35px;
     height: 35px;
     line-height: 35px; /* Centralizar o icone dentro da borda redonda */
     text-align: center;
-}
-.item-social-media a { /* Mudando a cor dos icones, os icones são considerados textos */
     color: #95a5a6;
 }
 .form {
     display: flex; /* Usado para deixar os inputs flex */
     flex-direction: column; /* Usada para alinhar os inputs em forma de coluna */
+    width: 55%;
+    text-align: center;
 }
 .form input {
-    height: 45px;
+    height: 45px; 
+    width: 100%;
     border: none;
     background-color: #ecf0f1;
+    
 }
-
+.label-input {
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    margin: 7px;
+    border-radius: 5px;
+}
+.icon-modify {
+    color: #7f8c8d;
+    padding: 0 5px;
+}
 /* CONTEUDO SEGUNDA PARTE */
 
 .segundo-conteudo {
     position: absolute;
-    display: none;
+    display: flex;
+}
+.segundo-conteudo .primeira-coluna {
+    order: 2;
 
+}
+.segundo-conteudo .segunda-coluna {
+    order: 1;
+}
+.password {
+    color: #34495e;
 }

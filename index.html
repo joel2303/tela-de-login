@@ -19,7 +19,7 @@
                 <h2 class="titulo titulo-primario">Welcome back !</h2>
                 <p class="description primary-description">Para continuar conectado com nós</p>
                 <p class="description primary-description">Por favor, entre com suas informações pessoais.</p>
-                <button class="btn btn-primary">Entrar</button>
+                <button class="btn btn-primario">Entrar</button>
             </div>
 
 <!-- Separação de colunas da primeira parte -->
@@ -28,17 +28,40 @@
                 <h2 class="titulo titulo-segundo">Criar conta</h2>
                 <div class="social-media">
                     <ul class="list-social-media">
-                        <li class="item-social-media"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="item-social-media"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                        <li class="item-social-media"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-facebook-f"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                             <li class="item-social-media">
+                                <i class="fab fa-linkedin-in"></i>
+                            </li>
+                        </a>
                     </ul>
                 </div>
             <p class="description segundo-description">Ou utilize o seu E-mail para se registrar: </p>
                 <form action="" class="form">
-                    <input type="text" placeholder="Nome">
-                    <input type="email" placeholder="E-mail">
-                    <input type="password" placeholder="Senha">
-                    <button class="btn">Registrar-se</button>
+                    <label class="label-input" for="">
+                        <i class="fas fa-user icon-modify"></i>
+                        <input type="text" placeholder="Nome">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="E-mail">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock-open icon-modify"></i>
+                        <input type="password" placeholder="Senha">
+                    </label>
+                    <button class="btn btn-segundo">Registrar-Se</button>
                 </form>
             </div>
 
@@ -49,30 +72,53 @@
         <div class="conteudo segundo-conteudo">
 
             <div class="primeira-coluna">
-                <h2 class="titulo">Olá, amigo</h2>
-                <p class="description">Entre com suas informações</p>
-                <p class="description">E comece essa jornada com nós</p>
-                <button class="btn">Registrar-se</button>
+                <h2 class="titulo titulo-primario">Olá, amigo!</h2>
+                <p class="description description primary-description">Entre com suas informações</p>
+                <p class="description description primary-description">E comece essa jornada com nós</p>
+                <button class="btn btn-primario">Registrar-se</button>
             </div>
 
 <!-- Separação de colunas da segunda parte -->
 
             <div class="segunda-coluna">
-                <h2 class="titulo">Entre para desenvolver</h2>
+                <h2 class="titulo titulo-segundo">Entre para desenvolver</h2>
                 <div class="social-media">
-                    <ul>
-                        <li><a href="#">facebook</a></li>
-                        <li><a href="#">google+</a></li>
-                        <li><a href="#">linkedin</a></li>
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-facebook-f"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                             <li class="item-social-media">
+                                <i class="fab fa-linkedin-in"></i>
+                            </li>
+                        </a>
                     </ul>
                 </div>
-                <p class="description">Ou utilize o seu E-mail da conta:</p>
+                <p class="description primary-description">Ou utilize o seu E-mail da conta:</p>
+
                 <form action="" class="form">
-                    <input type="email" placeholder="E-mail">
-                    <input type="password" placeholder="Senha">
-                    <a href="#">Esqueceu sua senha ?</a>
-                    <button class="btn btn-primary">Entrar</button>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="E-mail">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock-open icon-modify"></i>
+                        <input type="password" placeholder="Senha">
+                    </label>
+                    <a href="#" class="password">Esqueceu sua senha ?</a>
+                    <button class="btn btn-segundo">Entrar</button>
+                    
                 </form>
+
             </div>
 
         </div>
