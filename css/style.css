@@ -29,7 +29,7 @@ body {
 .conteudo::before {
     content: "";
     position: absolute;
-    background-color: rgba(80, 20, 220, 0.719);
+    background-color: rgb(80, 20, 220);
     width: 40%;
     height: 100%;
     border-top-left-radius: 15px;
@@ -195,13 +195,15 @@ body {
 .password::first-letter { /*PSEUDO CLASS só para a primeira letra maiuscula especificamente*/
     text-transform: capitalize;
 }
-.entrar-js .primeiro-conteudo .primeira-coluna,
-.entrar-js .primeiro-conteudo .segunda-coluna {
+.entrar-js .primeiro-conteudo .primeira-coluna {
     z-index: -1;
 }
-.entrar-js .segundo-conteudo .primeira-coluna,
+
 .entrar-js .segundo-conteudo .segunda-coluna {
     z-index: 11;
+}
+.entrar-js .segundo-conteudo .primeira-coluna {
+    z-index: 13;
 }
 .entrar-js .conteudo::before {
     left: 60%;
@@ -209,15 +211,146 @@ body {
     border-bottom-left-radius: 0px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    animation: slidein 3s;
+
+    z-index: 12;
 }
-.registrar-js .segundo-conteudo .primeira-coluna,
-.registrar-js .segundo-conteudo .segunda-coluna {
+.registrar-js .conteudo::before {
+    animation: slideout 3s;
+
+    z-index: 12;
+}
+.registrar-js .segundo-conteudo .primeira-coluna {
     z-index: -1;
 }
-.registrar-js .primeiro-conteudo .primeira-coluna,
+
 .registrar-js .primeiro-conteudo .segunda-coluna {
     z-index: 11;
 }
+.registrar-js .primeiro-conteudo .primeira-coluna {
+    z-index: 13;
+}
 input:focus{
     outline: none;
+}
+
+
+/* ANIMAÇÃO DE DESLOCAMENTO */
+.entrar-js .primeiro-conteudo .segunda-coluna {
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoEsq 3s;
+}
+
+.registrar-js .segundo-conteudo .segunda-coluna {
+    position: relative;
+    z-index: -1;
+    animation: deslocamentoDir 3s;
+}
+/*Animação para o conteudo*/
+@keyframes deslocamentoEsq {
+    from {
+        left: 0%;
+        opacity: 1;
+        z-index: 12;
+    }
+
+    25% {
+        left: -80px;
+        opacity: .5;
+    }
+
+    50% {
+        left: -100px;
+        opacity: .2;
+    }
+
+    to {
+        left: -110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes deslocamentoDir {
+    from {
+        left: 0;
+        z-index: 12;
+    }
+    25% {
+        left: 80px;
+
+    }
+    50% {
+        left: 100px;
+
+    }
+    to {
+        left: 110px;
+        z-index: -1;
+    }
+}
+
+
+/* ANIMAÇÃO DO CSS */
+
+@keyframes slidein {
+    from {
+        left: 0;
+        width: 40%;
+
+    }
+
+    25% {
+        left: 5%;
+        width: 50%;
+
+    }
+
+    50% {
+        left: 25%;
+        width: 60%;
+
+    }
+
+    75% {
+        left: 45%;
+        width: 50%;
+
+    }
+
+    to {
+        left: 60%;
+        width: 40%;
+    }
+}
+
+@keyframes slideout{
+    from {
+        left: 60%;
+        width: 40%;
+    }
+
+    25% {
+        left: 45%;
+        width: 50%;
+
+    }
+
+    50% {
+        left: 25%;
+        width: 60%;
+
+    }
+
+    75% {
+        left: 5%;
+        width: 50%;
+
+    }
+
+    to {
+        left: 0%;
+        width: 40%;
+    }
 }
