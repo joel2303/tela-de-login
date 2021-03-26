@@ -8,6 +8,7 @@
 }
 body {
     font-family: 'Open Sans', sans-serif;
+    border: none;
 }
 .container {
     display: flex; /* Usado para colocar o conteudo da div pai alinhadas ao lado*/
@@ -20,7 +21,7 @@ body {
     border-radius: 15px;
     background-color: rgb(255, 255, 255);
     width: 960px;
-    height: 63%;
+    height: 60%;
     justify-content: space-between; /*Usada para dar um espaço entre os conteudos dentro da div*/
     align-items: center;
     position: relative;
@@ -29,18 +30,18 @@ body {
     content: "";
     position: absolute;
     background-color: rgba(80, 20, 220, 0.719);
-    width: 37%;
+    width: 40%;
     height: 100%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 
 
 
-    left: 63%;
+    left: 0%;
 }
 .primeiro-conteudo {
     display: flex;
-    display: none;
+    
 }
 .titulo {
     font-size: 28px;
@@ -84,6 +85,8 @@ body {
 .btn-primario {
     background-color: transparent;
     border: 1px solid #fff;
+    transition: background-color .5s;
+    outline: none; /*remover borda dos inputs*/
 }
 .btn-primario:hover {  /* USADO PARA TRANSFORMAR O BOTÃO QUANDO PASSAR O MOUSE EM CIMA*/
     background-color: #fff;
@@ -95,19 +98,24 @@ body {
     margin-top: 15px;
     font-size: 12px;
     height: 30px;
+    transition: background-color .5s; /*Adicionando um tempo na transição da cor do botão*/
+    outline: none; /*remover borda dos inputs*/
 }
 .btn-segundo:hover {
     background-color: #fff;
     color: rgba(80, 20, 220, 0.719);
     border: 1px solid rgba(80, 20, 220, 0.719);
 }
+.primeiro-conteudo .segunda-coluna {
+    z-index: 11;
+}
 .primeira-coluna {
     text-align: center;
-    flex: 1 0 auto; /* Flex é usado para dividir o espaço na div*/
+    width: 40%;
     z-index: 10;
 }
 .segunda-coluna {
-    flex: 2 0 auto;
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,7 +144,9 @@ body {
     line-height: 35px; /* Centralizar o icone dentro da borda redonda */
     text-align: center;
     color: #95a5a6;
+    transition: background-color .5s;
 }
+
 .form {
     display: flex; /* Usado para deixar os inputs flex */
     flex-direction: column; /* Usada para alinhar os inputs em forma de coluna */
@@ -169,10 +179,12 @@ body {
 }
 .segundo-conteudo .primeira-coluna {
     order: 2;
+    z-index: -1;
 
 }
 .segundo-conteudo .segunda-coluna {
     order: 1;
+    z-index: -1;
 }
 .password {
     color: #34495e;
@@ -182,4 +194,30 @@ body {
 }
 .password::first-letter { /*PSEUDO CLASS só para a primeira letra maiuscula especificamente*/
     text-transform: capitalize;
+}
+.entrar-js .primeiro-conteudo .primeira-coluna,
+.entrar-js .primeiro-conteudo .segunda-coluna {
+    z-index: -1;
+}
+.entrar-js .segundo-conteudo .primeira-coluna,
+.entrar-js .segundo-conteudo .segunda-coluna {
+    z-index: 11;
+}
+.entrar-js .conteudo::before {
+    left: 60%;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.registrar-js .segundo-conteudo .primeira-coluna,
+.registrar-js .segundo-conteudo .segunda-coluna {
+    z-index: -1;
+}
+.registrar-js .primeiro-conteudo .primeira-coluna,
+.registrar-js .primeiro-conteudo .segunda-coluna {
+    z-index: 11;
+}
+input:focus{
+    outline: none;
 }
